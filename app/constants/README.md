@@ -1,0 +1,1 @@
+### **constants** folder will contain all the constants and strings.

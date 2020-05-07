@@ -1,0 +1,22 @@
+import { call, put } from 'redux-saga/effects';
+import {{pascalCase name}}Actions from '../redux/reducers/{{pascalCase name}}';
+import { getError } from '../services/Utils';
+
+function* handleResponse(response) {
+  if (response?.code === 200) {
+    yield put(
+      {{pascalCase name}}Actions.authSuccess({
+        ...response.data.currentUserDetails,
+        token: response.token
+      })
+    );
+  } else {
+    const error = yield call(getError, response);
+    yield put({{pascalCase name}}Actions.authFailure(error));
+  }
+}
+
+export function* {{camelCase name}}(api, action) {
+  const response = yield call(api.{{camelCase name}}, action.payload);
+  yield* handleResponse(response.data);
+}

@@ -1,0 +1,72 @@
+{
+  "name": "SimformRN",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ./app",
+    "fixcode": "eslint --fix ./app",
+    "podinstall": "cd ios && pod install && cd ..",
+    "android": "npm run lint && npx react-native run-android",
+    "ios": "npm run lint && npx react-native run-ios",
+    "generate": "plop"
+  },
+  "lint-staged": {
+    "app/**/*.js": [
+      "npm run fixcode"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.6.3",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/drawer": "^5.6.3",
+    "@react-navigation/native": "^5.2.3",
+    "@react-navigation/stack": "^5.2.18",
+    "apisauce": "^1.1.1",
+    "formik": "^2.0.6",
+    "native-base": "^2.13.8",
+    "ramda": "^0.26.1",
+    "react": "16.11.0",
+    "react-native": "^0.62.2",
+    "react-native-config": "^0.12.0",
+    "react-native-gesture-handler": "^1.4.1",
+    "react-native-image-crop-picker": "^0.26.1",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-reanimated": "^1.2.0",
+    "react-native-safe-area-context": "^0.7.3",
+    "react-native-screens": "^2.7.0",
+    "react-native-vector-icons": "^6.6.0",
+    "react-redux": "^7.1.3",
+    "reactotron-react-native": "^4.0.2",
+    "reactotron-redux": "^3.1.2",
+    "reactotron-redux-saga": "^4.2.3",
+    "redux": "^4.0.4",
+    "redux-persist": "^6.0.0",
+    "redux-saga": "^1.1.3",
+    "reduxsauce": "^1.1.1",
+    "seamless-immutable": "^7.1.4",
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/runtime": "^7.7.4",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.7.1",
+    "husky": "^3.0.3",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.1",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "plop": "^2.5.3",
+    "react-test-renderer": "16.11.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

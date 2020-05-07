@@ -1,0 +1,17 @@
+import { Container, Content } from 'native-base';
+import React from 'react';
+import { CustomHeader } from '../../components';
+import styles from './styles/{{pascalCase name}}Style';
+
+class {{pascalCase screen}}Screen extends React.Component {
+  render() {
+    return (
+      <Container>
+        <CustomHeader title={'{{pascalCase screen}}'} />
+        <Content />
+      </Container>
+    );
+  }
+}
+
+export default {{pascalCase screen}}Screen;
