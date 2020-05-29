@@ -45,18 +45,6 @@ this is a unassigned task for react navigation v5 and custom drawer animation
       ```
     * Note: This npm scripts will lint your code first. If there are no lint errors, then it will run the ios or android app. Otherwise it will show the lint errors in the terminal.
 
-## Reusablity
-- **How it can be reused?**
-  - Clone the repository
-  - Install [react-native-rename](https://www.npmjs.com/package/react-native-rename) as global dependency
-- There are two bugs with this lib though.	
-  - If your old project name and new project name have same strings in them, it won't rename the ios .pbxproj, .xcodeproj and .xcworkspace files.
-  - To overcome this, we can rename the project with a totally different name first and than can rename it with the actual name.
-  ```bash 
-    first command: <project_root_directory>$react-native-rename "TestApp" -b com.simform.testapp
-
-    second command: <project_root_directory>$react-native-rename "SimformRN" -b com.simform.simformrn
-  ```
 
 ## [Template generator](./Template.md)
 - **Why generator?**
